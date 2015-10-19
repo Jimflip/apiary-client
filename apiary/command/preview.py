@@ -28,16 +28,11 @@ class Preview(object):
     def generate_static(self):
         preview_string = self.generate()
 
-        # File.open(preview_path, 'w') do |file|
-        # file.write preview_string
-        # file.flush
-        # @options.output ? write_generated_path(file.path, @options.output) : open_generated_page(file.path)
-
         with open(self.options['output'], 'w') as f:
             f.write(preview_string.encode('utf-8'))
 
     def generate(self):
-        template = self.load_preview_template()
+        self.load_preview_template()
 
         # data = {
         # title: File.basename(@options.path, '.*'),
