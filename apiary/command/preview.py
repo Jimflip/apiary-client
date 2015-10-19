@@ -5,7 +5,7 @@ import os
 from apiary.helpers.javascript_helper import escape_javascript
 
 
-class Preview:
+class Preview(object):
     PREVIEW_TEMPLATE_PATH = os.path.dirname(os.path.abspath(__file__)) + '/../file_templates/preview.py'
 
     def __init__(self, **kwargs):
@@ -33,9 +33,8 @@ class Preview:
         # file.flush
         # @options.output ? write_generated_path(file.path, @options.output) : open_generated_page(file.path)
 
-        f = open(self.options['output'], 'w')
-        f.write(preview_string)
-        f.close
+        with open(self.options['output'], 'w') as f:
+            f.write(preview_string.encode('utf-8'))
 
     def generate(self):
         template = self.load_preview_template()
@@ -45,7 +44,7 @@ class Preview:
         # blueprint: load_blueprint
         # }
 
-        return self.template.render(title="API", magic=escape_javascript(self.load_blueprint()))
+        return self.template.render(title="API", magic=escape_javascript(self.load_blueprint()).decode('utf-8'))
 
     def load_preview_template(self):
         template_file = open(Preview.PREVIEW_TEMPLATE_PATH, 'r')
