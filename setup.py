@@ -17,4 +17,6 @@ setup(name='apiary',
           "console_scripts": [
               "apiary = apiary.__main__:main"
           ]
-      })
+      },
+      url="https://github.com/Jimflip/apiary-client.git",
+      download_url="https://github.com/Jimflip/apiary-client/archive/0.0.1.tar.gz")
