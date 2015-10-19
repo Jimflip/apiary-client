@@ -4,7 +4,7 @@ from setuptools import setup
 
 
 setup(name='apiary',
-      version='0.0.2',
+      version='0.0.3',
       description='Python version of the Ruby Apiary client',
       author='James Birmingham, Apiary',
       author_email='james@dimsum.tv',
@@ -19,4 +19,4 @@ setup(name='apiary',
           ]
       },
       url="https://github.com/Jimflip/apiary-client.git",
-      download_url="https://github.com/Jimflip/apiary-client/archive/0.0.1.tar.gz")
+      download_url="https://github.com/Jimflip/apiary-client/archive/0.0.3.tar.gz")
