@@ -58,3 +58,6 @@ target/
 
 .idea
 .venv
+apiary.egg-info
+build
+dist
