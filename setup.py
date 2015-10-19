@@ -4,7 +4,7 @@ from setuptools import setup
 
 
 setup(name='apiary',
-      version='0.0.1',
+      version='0.0.2',
       description='Python version of the Ruby Apiary client',
       author='James Birmingham, Apiary',
       author_email='james@dimsum.tv',
