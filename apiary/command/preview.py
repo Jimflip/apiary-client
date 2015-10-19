@@ -6,7 +6,7 @@ from apiary.helpers.javascript_helper import escape_javascript
 
 
 class Preview:
-    PREVIEW_TEMPLATE_PATH = os.path.dirname(os.path.abspath(__file__)) + '/../file_templates/preview.j2'
+    PREVIEW_TEMPLATE_PATH = os.path.dirname(os.path.abspath(__file__)) + '/../file_templates/preview.py'
 
     def __init__(self, **kwargs):
         self.options = kwargs
