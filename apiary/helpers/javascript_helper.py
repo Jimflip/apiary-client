@@ -16,7 +16,6 @@ JS_ESCAPE_MAP = {
 
 
 def match(m):
-    pprint(m.group())
     return JS_ESCAPE_MAP[m.group()]
 
 
@@ -24,4 +23,4 @@ def escape_javascript(javascript):
     if javascript:
         return re.sub(r"(\\|</|\r\n|\342\200\250|\342\200\251|[\n\r\"\'])", match, javascript)
     else:
-        ''
+        return ''
