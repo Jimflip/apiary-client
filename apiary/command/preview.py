@@ -45,7 +45,7 @@ class Preview:
         # blueprint: load_blueprint
         # }
 
-        return self.template.render(title="todo", magic=escape_javascript(self.load_blueprint()))
+        return self.template.render(title="API", magic=escape_javascript(self.load_blueprint()))
 
     def load_preview_template(self):
         template_file = open(Preview.PREVIEW_TEMPLATE_PATH, 'r')
