@@ -1,4 +1,0 @@
-import apiary
-
-if __name__ == "__main__":
-    apiary.cli.cli()
