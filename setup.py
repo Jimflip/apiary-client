@@ -11,7 +11,7 @@ setup(name='apiary',
       packages=['apiary', 'apiary.command', 'apiary.helpers', 'apiary.file_templates'],
       install_requires=[
           'click',
-          'Jinja2==2.8'
+          'Jinja2==2.11.3'
       ],
       entry_points={
           "console_scripts": [
